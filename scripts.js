@@ -50,4 +50,19 @@ document.addEventListener('DOMContentLoaded', function() {
         let randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
         para.style.color = randomColor;
     })
+
+    //add button and empty div to toggle name
+    let nameBtn = document.createElement('button');
+    let nameText = document.createTextNode('display name');
+    let nameDiv = document.createElement('div');
+    nameBtn.appendChild(nameText);
+    document.body.appendChild(nameBtn);
+    document.body.appendChild(nameDiv);
+
+    nameBtn.addEventListener('click', function(){
+        let nameSpan = document.createElement('span');
+        let name = document.createTextNode('liz');
+        nameSpan.appendChild(name);
+        nameDiv.appendChild(nameSpan);
+    })
 })
