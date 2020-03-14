@@ -36,4 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
     divColor.addEventListener('mouseout', function(){
         divColor.style.backgroundColor = null;
     })
+
+    // create paragraph with text 
+    let para = document.createElement('p');
+    let paraText = document.createTextNode('click me: i change colors');
+    para.appendChild(paraText);
+    document.body.appendChild(para);
+
+    // change paragraph text color on click
+    para.addEventListener('click', function() {
+        // set up rendom color selector
+        let colorArray = ['seagreen', 'red', 'gold', 'coral', 'tan', 'cream'];
+        let randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
+        para.style.color = randomColor;
+    })
 })
