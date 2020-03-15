@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // create first button
     let btn = document.createElement('button');
     let btnText = document.createTextNode('click me');
+    let p2 = document.getElementById('2');
     btn.style.display = "block";
     btn.appendChild(btnText);
-    document.body.prepend(btn);
+    document.body.insertBefore(btn, p2);
 
     // display alert on button click
     btn.addEventListener('click', function () {
@@ -40,12 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // create paragraph with text 
     let para = document.createElement('p');
     let paraText = document.createTextNode('click me: i change colors');
+    let p5 = document.getElementById('5');
     para.appendChild(paraText);
-    document.body.appendChild(para);
+    document.body.insertBefore(para, p5);
 
     // change paragraph text color on click
     para.addEventListener('click', function () {
-        // set up rendom color selector
+        // set up rsndom color selector
         let colorArray = ['seagreen', 'red', 'gold', 'coral', 'tan', 'cream'];
         let randomColor = colorArray[Math.floor(Math.random() * colorArray.length)];
         para.style.color = randomColor;
@@ -55,9 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let nameBtn = document.createElement('button');
     let nameText = document.createTextNode('display name');
     let nameDiv = document.createElement('div');
+    let p6 = document.getElementById('6');
     nameBtn.appendChild(nameText);
-    document.body.appendChild(nameBtn);
-    document.body.appendChild(nameDiv);
+    document.body.insertBefore(nameBtn, p6);
+    document.body.insertBefore(nameDiv, p6);
 
     // name to display
     nameBtn.addEventListener('click', function () {
